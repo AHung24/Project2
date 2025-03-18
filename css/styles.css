@@ -1,0 +1,28 @@
+*{
+    background-color: black;
+}
+
+h1{ 
+    position: absolute;
+    top: 45%;
+    left: 42%;
+    color: white;
+}
+
+h3{
+    color: white;
+    position: absolute;
+    top: 55%;
+    left: 44%;
+}
+
+p{
+    color: white;
+
+}
+
+
+/* transition-property: all;
+transition-duration: 5s;    
+transition-timing-function: ease;
+transition-duration: 1s; */
