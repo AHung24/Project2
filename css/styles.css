@@ -2,18 +2,50 @@
     background-color: black;
 }
 
+/*------------Page 1 Below ---------------*/
+
 h1{ 
     position: absolute;
     top: 45%;
     left: 42%;
     color: white;
+transition-property: all;
+transition-duration: 5s;    
+transition-timing-function: ease;
+transition-delay: 0.5s; 
+transform: scale(2) ;
+font-family: 'Sail', cursive;
 }
 
+.credits{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.topage2{
+    color: red;
+    transition-property: all;
+    transition-duration: 1s;    
+    transition-timing-function: ease;
+    transition-delay: 0s; 
+    transform: scale(2) ;
+    font-family: 'Sail', cursive;
+    text-decoration: none;
+    opacity: 0;
+}
+
+.topage2:hover {
+    opacity: 1;
+    transform: scale(1);
+}
 h3{
     color: white;
     position: absolute;
     top: 55%;
-    left: 44%;
+    left: 42%;
+    transition-property: all;
+    transition-duration: 5s;    
+    transition-timing-function: ease;
+    transition-delay: 0.5s; 
+    font-family: 'Sail', cursive;
 }
 
 p{
@@ -21,8 +53,44 @@ p{
 
 }
 
+/*------------Page 2 Below ---------------*/
 
-/* transition-property: all;
-transition-duration: 5s;    
+.line1{
+position: absolute;
+display: inline-block;
+
+top: 45%;
+left: 42%;
+color: white;
+transition-property: all;
+transition-duration: 4s;    
 transition-timing-function: ease;
-transition-duration: 1s; */
+transition-delay: 0.5s; 
+transform: scale(2) ;
+font-family: 'Sail', cursive;
+}
+
+#wrong{
+    color: red;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: 3s;    
+    transition-timing-function: ease;
+    transition-delay: 0s; 
+    transform: scale(1); 
+    opacity: 0;
+    font-family: 'Sail', cursive;
+    text-decoration: none;
+}
+
+#wrong:hover{
+    transform: translate(0px, 65px) scale(2);
+    opacity: 1;
+}
+
+
+
+/* transition-property:
+transition-duration:
+transition-timing-function:
+transition-delay:  */
