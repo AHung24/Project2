@@ -1,5 +1,6 @@
-*{
+html{
     background-color: black;
+    font-family: 'Sail', cursive;
 }
 
 /*------------Page 1 Below ---------------*/
@@ -9,33 +10,35 @@ h1{
     top: 45%;
     left: 42%;
     color: white;
-transition-property: all;
-transition-duration: 5s;    
-transition-timing-function: ease;
-transition-delay: 0.5s; 
-transform: scale(2) ;
-font-family: 'Sail', cursive;
+    transition-property: all;
+    transition-duration: 5s;    
+    transition-timing-function: ease;
+    transition-delay: 0.5s; 
+    transform: scale(2) ;
+    font-family: 'Sail', cursive;
 }
 
 .credits{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 .topage2{
-    color: red;
+    color: yellow;
     transition-property: all;
-    transition-duration: 1s;    
+    transition-duration: 5s;    
     transition-timing-function: ease;
     transition-delay: 0s; 
     transform: scale(2) ;
     font-family: 'Sail', cursive;
     text-decoration: none;
-    opacity: 0;
-}
-
-.topage2:hover {
     opacity: 1;
-    transform: scale(1);
 }
+/* 
+.topage2:hover {
+    opacity: 0;
+    transform: scale(1);
+    color: yellow;
+} */
+
 h3{
     color: white;
     position: absolute;
@@ -54,7 +57,219 @@ p{
 }
 
 /*------------Page 2 Below ---------------*/
+.line1 {
+    position: absolute;
+    display: inline-block;
+    top: 45%;
+    left: 42%;
+    color: white;
+    font-family: 'Sail', cursive;
+    opacity: 0;
+    animation-name: line1-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
 
+#wrong {
+    color: red;
+    display: inline-block;
+    font-family: 'Sail', cursive;
+    text-decoration: none;
+    opacity: 0;
+    transform: translate(0px, 0px) scale(1);
+    animation-name: wrong-animation;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.world {
+    display: inline-block;
+    font-family: 'Sail', cursive;
+    text-decoration: none;
+    transform: rotate(0deg);
+    opacity: 0;
+    animation-name: world-rotate;
+    animation-duration: 3s;
+    animation-timing-function: ease-in;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-play-state: running;}
+
+@keyframes world-rotate {
+    0% {
+        color: white;
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        color: rgb(113, 113, 237);
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+
+
+@keyframes line1-animation {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    } 
+    100% {
+        opacity: 1;
+        transform: scale(4);
+    }
+}
+
+@keyframes wrong-animation {
+    0% {
+        opacity: 0;
+        transform: translate(0px, 0px) scale(1);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0px, 25px) scale(3);
+    }
+}
+
+
+/*------------Page 3 Below ---------------*/
+
+.race1 {
+    position: absolute;
+    top: 45%;
+    left: 40%;
+    color: white;
+    font-family: 'Sail', cursive;
+    opacity: 0;
+    transform: translateX(0) scale(3);
+    animation-name: race1-animation;
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-delay: 0.0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes race1-animation {
+    0% {
+        opacity: 0;
+        transform: translate(100vw, -5vw) scale(1); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0vw, -5vw) scale(5);
+    }
+}
+
+
+.race2 {
+    position: absolute;
+    top: 52%;
+    left: 39.5%;
+    color: white;
+    display: inline-block;
+    font-family: 'Sail', cursive;
+    opacity: 0;
+    transform: translateX(0) scale(1);
+    animation-name: race2-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.colorlove{
+    color: yellow;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: 2.5s;    
+    transition-timing-function: ease;
+    transition-delay: 0.0s; 
+    cursor: default;   
+}
+
+.colorlove:hover{
+    transform: translate(0px, -50px) scale(2);
+}
+
+.colorword{
+    color: yellow;
+    display: inline-block;
+    transition-property: all;
+    transition-duration: 2s;    
+    transition-timing-function: ease;
+    transition-delay: 0.0s; 
+    text-decoration: none;
+
+}
+
+.colorword:hover{
+    transform: translate(0px, 25px) rotate(45deg);
+}
+
+.colorword{
+    color: red;
+}
+@keyframes race2-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-100vw, 5vh) scale(1); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0vw, 5vh) scale(5);
+    }
+}
+
+/*------------Page 4 Below ---------------*/
+
+.chorus1 {
+    position: absolute;
+    top: 52%;
+    left: 38%;
+    color: white;
+    display: inline-block;
+    font-family: 'Sail', cursive;
+    transform: scale(3);
+    animation-name: chrous1-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+.killin{
+    
+}
+
+/* @keyframes chorus1-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-100vw, 5vh) scale(1); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0vw, 5vh) scale(5);
+    }
+} */
+
+/* 
 .line1{
 position: absolute;
 display: inline-block;
@@ -75,18 +290,18 @@ font-family: 'Sail', cursive;
     display: inline-block;
     transition-property: all;
     transition-duration: 3s;    
-    transition-timing-function: ease;
-    transition-delay: 0s; 
-    transform: scale(1); 
-    opacity: 0;
+    transition-timing-function: ease-in;
+    transition-delay: 4s; 
+    opacity: 1;
     font-family: 'Sail', cursive;
     text-decoration: none;
-}
+    transform: translate(0px, 55px) scale(2);
+} */
 
-#wrong:hover{
+/* #wrong:hover{
     transform: translate(0px, 65px) scale(2);
     opacity: 1;
-}
+} */
 
 
 
