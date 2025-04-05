@@ -34,12 +34,6 @@ h1{
      /* Link for glowing effect: https://www.w3schools.com/css/css3_shadows.asp */
     text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
 }
-/* 
-.topage2:hover {
-    opacity: 0;
-    transform: scale(1);
-    color: yellow;
-} */
 
 h3{
     color: white;
@@ -67,6 +61,7 @@ p{
     color: white;
     font-family: 'Sail', cursive;
     opacity: 0;
+    /* Professor Oakley's Module on Animations and Keyframes: https://sfsu.instructure.com/courses/47516/pages/week-8-asynch-module-8-dot-2-animations-slash-project-2?module_item_id=2990588*/
     animation-name: line1-animation;
     animation-duration: 4s;
     animation-timing-function: ease;
@@ -138,11 +133,11 @@ p{
 @keyframes wrong-animation {
     0% {
         opacity: 0;
-        transform: translate(0px, 0px) scale(1);
+        transform: translate(0vw, 0vh) scale(1);
     }
     100% {
         opacity: 1;
-        transform: translate(0px, 25px) scale(2);
+        transform: translate(0vw, 3vh) scale(2);
     }
 }
 
@@ -158,25 +153,13 @@ p{
     opacity: 0;
     transform: translateX(0) scale(3);
     animation-name: race1-animation;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-timing-function: ease;
     animation-delay: 0.0s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
 }
-
-@keyframes race1-animation {
-    0% {
-        opacity: 0;
-        transform: translate(100vw, -5vw) scale(1); 
-    }
-    100% {
-        opacity: 1;
-        transform: translate(0vw, -5vw) scale(3);
-    }
-}
-
 
 .race2 {
     position: absolute;
@@ -188,9 +171,9 @@ p{
     opacity: 0;
     transform: translateX(0) scale(1);
     animation-name: race2-animation;
-    animation-duration: 4s;
+    animation-duration: 3s;
     animation-timing-function: ease;
-    animation-delay: 0.0s;
+    animation-delay: 2s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -208,14 +191,14 @@ p{
 }
 
 .colorlove:hover{
-    transform: translate(0px, -50px) scale(2);
+    transform: translate(0vw, -3.5vh) scale(2);
 }
 
 .colorword{
     color: yellow;
     display: inline-block;
     transition-property: all;
-    transition-duration: 2s;    
+    transition-duration: 1.5s;    
     transition-timing-function: ease;
     transition-delay: 0.0s; 
     text-decoration: none;
@@ -223,21 +206,33 @@ p{
 }
 
 .colorword:hover{
-    transform: translate(0px, 25px) rotate(45deg);
+    transform: translate(0vw, 3vh) rotate(45deg);
 }
 
 .colorword{
     color: red;
     text-shadow: 0 0 10px rgb(208, 62, 62), 0 0 20px gold, 0 0 30px rgb(199, 135, 17);
 }
-@keyframes race2-animation {
+
+@keyframes race1-animation {
     0% {
         opacity: 0;
-        transform: translate(-100vw, 5vh) scale(1); 
+        transform: translate(100vw, -5vw) scale(1); 
     }
     100% {
         opacity: 1;
-        transform: translate(0vw, 5vh) scale(3);
+        transform: translate(0vw, -5vw) scale(3);
+    }
+}
+
+@keyframes race2-animation {
+    0% {
+        opacity: 0;
+        transform: translate(-100vw, -5vh) scale(1); 
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0vw, -5vh) scale(3);
     }
 }
 
@@ -252,9 +247,9 @@ p{
     font-family: 'Sail', cursive;
     transform: scale(3);
     animation-name: chorus1-entry, chorus1-turn;
-    animation-duration: 4s, 2s;
+    animation-duration: 3s, 2s;
     animation-timing-function: ease, ease;
-    animation-delay: 0s, 4s;
+    animation-delay: 0s, 3s;
     animation-fill-mode: forwards, forwards;
     animation-iteration-count: 1, 1;
     animation-direction: normal, normal;
@@ -269,9 +264,9 @@ p{
     font-family: 'Sail', cursive;
     transform: scale(3);
     animation-name: chorus2-entry, chorus2-turn;
-    animation-duration: 4s, 2s;
+    animation-duration: 3s, 2s;
     animation-timing-function: ease, ease;
-    animation-delay: 0s, 5s;
+    animation-delay: 0s, 4s;
     animation-fill-mode: forwards, forwards;
     animation-iteration-count: 1, 1;
     animation-direction: normal, normal;
@@ -371,7 +366,7 @@ p{
     animation-name: preach-animation;
     animation-duration: 3s;
     animation-timing-function: ease;
-    animation-delay: 5s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
@@ -385,7 +380,7 @@ p{
     animation-name: rotateword-animation;
     animation-duration: 2s;
     animation-timing-function: ease;
-    animation-delay: 5s;
+    animation-delay: 4s;
     animation-fill-mode: forwards;
     animation-iteration-count: 1;
     text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
@@ -414,10 +409,10 @@ p{
 
 @keyframes preach-animation {
     0% {
-        transform: translateX(0px) scale(1);
+        transform: translateX(0vw) scale(1);
     }
     100% {
-        transform: translateX(25px) scale(1);
+        transform: translateX(1vw) scale(1);
     }
 }
 
@@ -426,7 +421,7 @@ p{
         transform: translateX(0) scale(1) scaleX(-1);
     }
     100% {
-        transform: translateX(0px) scale(1) scaleX(1);
+        transform: translateX(0vw) scale(1) scaleX(1);
     }
 }
 
@@ -439,6 +434,13 @@ p{
     display: inline-block;
     font-family: 'Sail', cursive;
     transform: scale(3);
+    animation-name: chorus5-dissapear;
+    animation-duration: 1.5s;
+    animation-delay: 5s;
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
 .chorus6 {
@@ -495,7 +497,7 @@ margin: 1.5px;
     display: inline-block;
     transform: scale(1);
     animation-name: guidance-animation;
-    animation-duration: 6s;
+    animation-duration: 4s;
     animation-delay: 4.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: both;
@@ -509,6 +511,16 @@ margin: 1.5px;
     color: gold;
         text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
 }
+
+@keyframes chorus5-dissapear {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
 @keyframes pulsefather1 {
     0% {
         transform: scale(1) ;
@@ -531,7 +543,7 @@ margin: 1.5px;
     50% {
         color: gold;
         text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
-        transform: scale(1.25) translateX(0px)
+        transform: scale(1.25) translateX(0vw)
     }
     100% {
         color: gold;
@@ -561,12 +573,12 @@ margin: 1.5px;
     50% {
         color: gold;
         text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
-        transform: translate(0px, -100px) scale(2);
+        transform: translate(0vh, -4vh) scale(2);
 }
     100% {
         color: gold;
         opacity: 1;
-        transform: translate(0px);
+        transform: translate(0vh);
     }
 }
 
@@ -580,13 +592,13 @@ margin: 1.5px;
     display: inline-block;
     font-family: 'Sail', cursive;
     transform: scale(3);
-    animation-name: chorus7-animation;
-    animation-duration: 4s;
-    animation-timing-function: ease;
-    animation-delay: 0s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-direction: normal;
+    animation-name: chorus7-entry, chorus7-dissappear;
+    animation-duration: 4s, 2s;
+    animation-timing-function: ease, ease;
+    animation-delay: 0s, 6s;
+    animation-fill-mode: forwards, forwards;
+    animation-iteration-count: 1, 1;
+    animation-direction: normal, normal;
 }
 
 .chorus8 {
@@ -598,16 +610,16 @@ margin: 1.5px;
     font-family: 'Sail', cursive;
     transform: scale(3);
     opacity: 0;
-    animation-name: chorus8-animation;
-    animation-duration: 8s;
-    animation-timing-function: ease;
-    animation-delay: 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: 1;
-    animation-direction: normal;
+    animation-name: chorus8-animation, chorus8-movescale ;
+    animation-duration: 8s, 5s;
+    animation-timing-function: ease-in-out, ease;
+    animation-delay: 2s, 6s;
+    animation-fill-mode: forwards, forwards;
+    animation-iteration-count: 1, 1;
+    animation-direction: normal, normal;
 }
 
-@keyframes chorus7-animation {
+@keyframes chorus7-entry {
     0% {
         transform: translate(0vw, -100vh) scale(1);
     }
@@ -615,6 +627,15 @@ margin: 1.5px;
         transform: translate(0vw, -10vh) scale(3) ;
     }
 }
+@keyframes chorus7-dissappear {
+    0% {
+    opacity: 1;
+    }
+    100% {
+   opacity: 0;
+    }
+}
+
 @keyframes chorus8-animation {
     0% {
         opacity: 0;
@@ -634,8 +655,16 @@ margin: 1.5px;
     }
 }
 
-
-/* transition-property:
-transition-duration:
-transition-timing-function:
-transition-delay:  */
+@keyframes chorus8-movescale {
+    0% {
+        color: gold;
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
+        opacity: 1;
+    }
+    100% {
+        color: gold;
+        text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
+        opacity: 1;
+        transform: translate(0vw, -10vh) scale(3); 
+    }
+}
