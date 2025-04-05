@@ -16,18 +16,72 @@ h1{
     transition-delay: 0.5s; 
     transform: scale(2) ;
     font-family: 'Sail', cursive;
+    animation-name: intro-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
 }
 
-.credits{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+@keyframes intro-animation {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(360deg);
+        opacity: 1;
+        transform: scale(2);
+    }
 }
-.topage2{
-    color: yellow;
+
+
+.credits{
+    color: white;
+    position: absolute;
+    top: 75%;
+    left: 43%;
     transition-property: all;
     transition-duration: 5s;    
     transition-timing-function: ease;
+    transition-delay: 0.5s; 
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    animation-name: credits-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+}
+
+@keyframes credits-animation {
+    0% {
+        transform: rotate(0deg);
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0vw, -15vh) scale(1.5);
+    }
+}
+
+.topage2{
+    color: yellow;
+    transition-property: all;
+    transition-duration: 4s;    
+    transition-timing-function: ease;
     transition-delay: 0s; 
-    transform: scale(2) ;
+    transform: scale(2);
+    animation-name: intro-animation;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: 1;
+    animation-direction: normal;
     font-family: 'Sail', cursive;
     text-decoration: none;
     opacity: 1;
@@ -35,17 +89,7 @@ h1{
     text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
 }
 
-h3{
-    color: white;
-    position: absolute;
-    top: 55%;
-    left: 42%;
-    transition-property: all;
-    transition-duration: 5s;    
-    transition-timing-function: ease;
-    transition-delay: 0.5s; 
-    font-family: 'Sail', cursive;
-}
+
 
 p{
     color: white;
@@ -206,7 +250,7 @@ p{
 }
 
 .colorword:hover{
-    transform: translate(0vw, 3vh) rotate(45deg);
+    transform: translate(1.5vw, 4vh) rotate(45deg) scale(1.5);
 }
 
 .colorword{
@@ -434,13 +478,14 @@ p{
     display: inline-block;
     font-family: 'Sail', cursive;
     transform: scale(3);
-    animation-name: chorus5-dissapear;
-    animation-duration: 1.5s;
-    animation-delay: 5s;
-    animation-timing-function: ease;
-    animation-fill-mode: both;
-    animation-iteration-count: 1;
-    animation-direction: normal;
+    opacity: 1;
+    animation-name: chorus5-dissapear, chorus5-reappear;
+    animation-duration: 1.5s, 1.5s;
+    animation-delay: 5s, 7.25s;
+    animation-timing-function: ease, ease;
+    animation-fill-mode: forwards, forwards;
+    animation-iteration-count: 1, 1;
+    animation-direction: normal, normal;
 }
 
 .chorus6 {
@@ -460,7 +505,7 @@ animation-name: pulsefather1;
 animation-duration: 1.5s;
 animation-delay: 0s;
 animation-timing-function: ease-in-out;
-animation-fill-mode: both;
+animation-fill-mode: forwards;
 animation-iteration-count: 1;
 animation-direction: normal;
 margin: 1.5px;
@@ -474,7 +519,7 @@ margin: 1.5px;
     animation-duration: 1.5s;
     animation-delay: 1s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
     margin: 1.5px;
@@ -487,7 +532,7 @@ margin: 1.5px;
     animation-duration: 1.5s;
     animation-delay: 2s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
     margin: 1.5px;
@@ -500,7 +545,7 @@ margin: 1.5px;
     animation-duration: 4s;
     animation-delay: 4.5s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: both;
+    animation-fill-mode: forwards;
     animation-iteration-count: 1;
     animation-direction: normal;
     margin: 1.5px; 
@@ -518,6 +563,15 @@ margin: 1.5px;
     }
     100% {
         opacity: 0;
+    }
+}
+
+@keyframes chorus5-reappear {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
 
